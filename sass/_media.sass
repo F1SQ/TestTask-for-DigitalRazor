@@ -1,0 +1,393 @@
+@media (min-width : 1921px)
+  .header
+    &-top
+      padding: 0 30px 0 160px
+      min-height: 130px
+      &::after
+        border: 2px solid #B3BFCD
+      &__nav
+        li
+          a
+            font-size: 20px
+      &__phone
+        img
+          width: 32px
+          height: 32px
+        a
+          font-size: 32px
+
+      &__user
+        &::after
+          width: 64px
+          height: 64px
+
+    &-bottom
+      min-height: 130px
+      &__logo
+        img
+          width: 80px
+          height: 80px
+      li
+        font-size: 32px
+        a
+          font-size: 32px
+      &__purchase
+        a
+          img
+            width: 45px
+            height: 45px
+
+  .main
+    padding: 80px 160px 80px 160px
+    &-title
+      font-size: 48px
+      margin: 0 0 64px 0
+      &::after
+        left: -50px
+        bottom: -40px
+
+      &__text
+        font-size: 24px
+    &-subtitle
+      font-size: 48px
+  .products
+    &__card
+      min-height: 640px
+
+@media (max-width : 1700px)
+  .header
+    padding: 0 100px
+    &-top
+      min-height: 80px
+      padding: 0 30px 0 60px
+      &__nav
+        li
+          &:not(:last-child)
+            margin-right: 20px
+
+          a
+            font-size: 14px
+      &__location
+        margin: 0 35px 0 0
+        a
+          font-size: 17px
+      &__phone
+        img
+          width: 20px
+          height: 20px
+        a
+          font-size: 18px
+
+    &-bottom
+      padding: 0 40px 0 10px
+      min-height: 80px
+      &__logo
+        img
+          width: 55px
+          height: 55px
+      &__nav
+        li
+          font-size: 18px
+          a
+            font-size: 18px
+          &:not(:last-child)
+            margin: 0 40px 0 0
+
+  .main
+    &__wrapper
+      padding: 50px 160px 60px 160px
+    &-arrow
+      img
+        width: 40px
+        height: 40px
+    &-title
+      font-size: 35px
+      line-height: 45px
+      text-transform: uppercase
+      margin: 0 0 25px 0
+      &::after
+        left: -64px
+        bottom: -20px
+        width: 300px
+      &__text
+        font-size: 17px
+    &-subtitle
+      font-size: 28px
+      line-height: 36px
+      letter-spacing: 1px
+
+@media (max-width : 1400px)
+  .header
+    padding: 0px 60px
+    &-top
+      padding: 0 30px 0 40px
+  .main
+    &-arrow
+      left: 100px
+  .products
+    &__main
+      grid-gap: 50px
+@media (max-width : 1200px)
+  .header
+    padding: 0px 30px
+    &-top
+      &__location
+        display: none
+      &__phone
+        a
+          font-size: 16px
+  .products
+    &__main
+      grid-template-columns: repeat(2, minmax(320px, 427px))
+
+@media (max-width : 1024px)
+  .header
+    padding: 0 40px
+    &-top
+      &__burger
+        position: relative
+        display: flex
+        align-items: center
+        justify-content: center
+        width: 35px
+        height: 20px
+        padding: 0
+        border: none
+        background-color: #000
+        cursor: pointer
+        z-index: 100
+        &::before
+          content: ''
+          position: absolute
+          top: -2px
+          left: -15px
+          width: 0
+          height: 0
+          opacity: 0
+          border-left: 15px solid transparent
+          border-right: 15px solid transparent
+          border-bottom: 25px solid #020405
+          transition: all 0.3s linear
+          z-index: 5
+        &::after
+          content: ''
+          position: absolute
+          top: -2px
+          right: -15px
+          width: 0
+          height: 0
+          border-left: 15px solid transparent
+          border-right: 15px solid transparent
+          border-bottom: 25px solid #020405
+          transition: all 0.3s linear
+          z-index: 5
+
+        &__line
+          position: relative
+          background-color: #fff
+          height: 3px
+          width: 35px
+          &::after, &::before
+            content: ''
+            position: absolute
+            background-color: #fff
+            left: 0
+            height: 3px
+            width: 35px
+          &::before
+            top: -7px
+          &::after
+            bottom: -7px
+
+      &__nav
+        display: none
+      &__info
+        width: 100%
+      &__location
+        display: block
+        flex-grow: 1
+      &__phone
+        flex-grow: 1
+      &__user
+        order: -1
+        margin-right: 50px
+  .main
+    &__wrapper
+      padding: 50px 40px 60px 40px
+  .products
+    &__main
+      &--desktop
+        display: none
+  .hidden
+    &-menu
+      &__nav
+        display: flex
+  .swiper
+    display: block
+
+@media (max-width : 992px)
+  .header
+    &-top
+      min-height: 70px
+      padding: 0 30px 0 20px
+    &-bottom
+      min-height: 70px
+      justify-content: space-between
+      &__nav
+        display: none
+      &__logo
+        margin: 0
+        img
+          width: 45px
+          height: 45px
+
+  .main
+    &-arrow
+      left: 50px
+
+@media (max-width : 768px)
+  .header
+    position: relative
+    &-top
+      padding: 5px
+      &__info
+
+      &__user
+        margin-right: 0
+        width: 50px
+        height: 50px
+        &::after
+          display: none
+      &__location
+        display: none
+      &__phone
+        display: none
+      &::after
+        display: none
+      &__logo
+        display: block
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        img
+          width: 45px
+          height: 45px
+    &-bottom
+      display: none
+  .main
+    &__wrapper
+      padding: 30px 10px 40px 10px
+    &-arrow
+      top: 30px
+    &-title
+      font-size: 30px
+      line-height: 30px
+      &::after
+        left: -34px
+        bottom: -15px
+        width: 220px
+        height: 2px
+      &__text
+        font-size: 15px
+        line-height: 40px
+      &-subtitle
+        font-size: 23px
+        line-height: 30px
+  .products
+    &__card
+      max-width: 75%
+      min-height: 470px
+      padding: 10px 10px 10px 10px
+    &__img
+      height: auto
+      img
+        width: 90%
+    &__title
+      font-size: 17px
+    &__description
+      max-width: 80%
+      font-size: 12px
+      line-height: 116%
+      // flex-grow: 0
+      margin: 0 0 25px 0
+    &__button
+      width: 200px
+      min-height: 58px
+      &__text
+        font-size: 16px
+
+@media (max-width : 425px)
+  .header
+    padding: 0 20px
+  .hidden
+    &-menu
+      &__top
+        padding: 0 20px
+  .main
+    &-arrow
+      top: 20px
+      left: 20px
+    &-title
+      &__text
+        font-size: 13px
+    &-subtitle
+      font-size: 18px
+  .products
+    &__card
+      min-height: 450px
+
+@media (max-width : 375px)
+  .page
+    background-color: #020405
+  .main
+    &-arrow
+      top: 30px
+      left: 25px
+      img
+        width: 32px
+        height: 32px
+    &-title
+      font-size: 25px
+      line-height: 25px
+      &::after
+        left: -24px
+        bottom: -10px
+        width: 180px
+    &-subtitle
+      font-size: 16px
+  .products
+    &__card
+      min-height: 400px
+    &__description
+      max-width: 90%
+    &__button
+      width: 180px
+      min-height: 48px
+
+@media (max-width : 320px)
+  .main
+    &-title
+      &__text
+        line-height: 30px
+    &-subtitle
+      max-width: 80%
+      line-height: 26px
+  .products
+    &__card
+      max-width: 70%
+      background-color: #000
+      min-height: 380px
+    &__description
+      font-size: 11px
+    &-slider
+      &__button
+        &--prev
+          img
+            width: 30px
+        &--next
+          img
+            width: 30px
+    &__button
+      &__text
+        font-size: 15px

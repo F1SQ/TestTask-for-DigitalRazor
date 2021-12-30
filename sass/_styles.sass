@@ -1,0 +1,336 @@
+.page
+  position: relative
+.header
+  padding: 0 160px
+  &-top
+    position: relative
+    display: flex
+    justify-content: space-between
+    align-items: center
+    min-height: 90px
+    padding: 0 30px 0 140px
+    &__burger
+      display: none
+
+    &::after
+      content: ''
+      position: absolute
+      left: 0
+      right: 0
+      bottom: 0
+      opacity: 0.12
+      border: 1px solid #B3BFCD
+    &__nav
+      display: flex
+      justify-content: flex-start
+      align-items: center
+      flex-wrap: wrap
+      list-style: none
+      margin: 0
+      padding: 0
+      li
+        a
+          font-size: 17px
+          font-weight: 400
+          line-height: 28px
+          color: rgba(255, 255, 255, 0.8)
+          text-decoration: none
+          transition: all 0.2s linear
+          &:hover
+            color: #D43C38
+
+      li:not(:last-child)
+        margin-right: 30px
+    &__info
+      display: flex
+      justify-content: space-between
+      align-items: center
+
+    &__location
+      display: flex
+      align-items: center
+      margin: 0 56px 0 0
+      img
+        width: 16px
+        height: 16px
+        margin-right: 6px
+    &__city
+      color: #B3BFCD
+      font-size: 20px
+      line-height: 28px
+      font-weight: 400
+      text-decoration: none
+      transition: all 0.2s linear
+      &:hover
+        color: #D43C38
+    &__phone
+      display: flex
+      align-items: center
+      margin: 0 56px 0 0
+      flex-shrink: 0
+      img
+        width: 25px
+        height: 25px
+        margin: 0 16px 0 0
+      a
+        font-weight: 500
+        font-size: 25px
+        line-height: 24px
+        color: #fff
+        text-decoration: none
+        transition: all 0.2s linear
+        &:hover
+          color: #D43C38
+
+    &__user
+      position: relative
+      display: flex
+      align-items: center
+      justify-content: center
+      width: 64px
+      height: 64px
+      cursor: pointer
+      &::after
+        content: ''
+        position: absolute
+        left: 50%
+        top: 50%
+        transform: translate(-50%,-50%)
+        width: 54px
+        height: 54px
+        opacity: 0.1
+        border: 1.6px solid #fff
+        border-radius: 50%
+        transition: all 0.2s ease
+      &:hover::after
+        opacity: 0.3
+        box-shadow: 0px 0px 20px #D43C38
+        border: 1.6px solid #D43C38
+      img
+        width: 20px
+        height: 20px
+    &__logo
+      display: none
+
+  &-bottom
+    min-height: 90px
+    display: flex
+    align-items: center
+    justify-content: flex-start
+    padding: 0 10px 0 20px
+
+    &__logo
+      margin: 0 56px 0 0
+      img
+        width: 65px
+        height: 65px
+      a
+        display: inline-block
+        width: 100%
+        height: 100%
+    &__nav
+      display: flex
+      align-items: center
+      justify-content: flex-start
+      flex-wrap: wrap
+      flex-grow: 1
+      list-style: none
+      margin: 0
+      padding: 0
+      li
+        font-weight: normal
+        font-size: 22px
+        line-height: 40px
+        color: #fff
+        a
+          font-weight: normal
+          font-size: 22px
+          line-height: 40px
+          color: #fff
+          text-decoration: none
+          transition: all 0.2s linear
+          &:hover
+            color: #D43C38
+
+      li:not(:last-child)
+        margin: 0 56px 0 0
+    &__purchase
+      a
+        display: inline-block
+        height: 100%
+        text-decoration: none
+        cursor: pointer
+        img
+          width: 32px
+          height: 32px
+      a:not(:last-child)
+        margin: 0 43px 0 0
+
+.main
+  display: flex
+  justify-content: center
+  align-items: center
+  &__wrapper
+    position: relative
+    width: 100%
+    padding: 60px 160px 60px 160px
+  &-arrow
+    position: absolute
+    top: 60px
+    left: 160px
+    a
+      display: inline-block
+      height: 100%
+    img
+      width: 50px
+      height: 50px
+  &-content
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: flex-start
+    color: #fff
+    &__info
+      display: flex
+      flex-direction: column
+      align-items: center
+      justify-content: center
+      text-align: center
+  &-title
+    position: relative
+    font-weight: 900
+    font-size: 38px
+    line-height: 56px
+    text-transform: uppercase
+    margin: 0 0 50px 0
+    &::after
+      content: ''
+      position: absolute
+      left: -80px
+      right: -50px
+      bottom: -25px
+      width: 350px
+      height: 3px
+      background-color: #D43C38
+      box-shadow: 0px 4px 4px rgba(212, 60, 56, 0.5)
+    &__text
+      text-transform: uppercase
+      font-weight: normal
+      font-size: 21px
+      line-height: 56px
+      letter-spacing: 1.1px
+  &-subtitle
+    text-transform: uppercase
+    font-weight: 700
+    font-size: 38px
+    line-height: 56px
+    letter-spacing: 1.5px
+    margin: 0
+
+.products
+  &__main
+    display: grid
+    grid-template-columns: repeat(3, minmax(320px, 427px))
+    grid-gap: 70px
+    padding: 50px 0 0 0
+
+  &__card
+    width: 100%
+    max-width: 427px
+    min-height: 600px
+    margin: 0 auto
+    padding: 24px 24px 40px 24px
+    display: flex
+    flex-direction: column
+    align-items: center
+    text-align: center
+    color: #fff
+    background: #0C1117
+    border: 2px solid transparent
+    -webkit-box-shadow: 0px 0px 20px 2px rgba(212, 60, 56, 0.3)
+    -moz-box-shadow: 0px 0px 20px 2px rgba(212, 60, 56, 0.3)
+    box-shadow: 0px 0px 20px 2px rgba(212, 60, 56, 0.3)
+    transition: all 0.4s ease
+    &:hover
+      border: 2px solid #D43C38
+
+  &__img
+    max-width: 100%
+    height: 315px
+    background: radial-gradient(51.84% 58.28% at 42.63% 71.6%, #3A3C59 0%, #0C1117 100%)
+    border-radius: 27.2621px
+    margin: 0 0 20px 0
+    img
+      width: 315px
+      max-width: 100%
+      height: auto
+      object-fit: cover
+
+  &__title
+    font-size: 25.8788px
+    line-height: 105.9%
+    font-weight: 900
+    margin: 0 0 12px 0
+    text-transform: uppercase
+
+  &__description
+    flex-grow: 1
+    margin: 0 0 37px 0
+    font-weight: normal
+    font-size: 14px
+    line-height: 128.4%
+
+  &__button
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 220px
+    min-height: 68px
+    // margin: 0 15px 0 0
+    color: #fff
+    text-decoration: none
+    background: #0C1117
+    border: 1px solid #D43C38
+    -webkit-box-shadow: 0px 0px 10px 2px rgba(212, 60, 56, 0.3)
+    -moz-box-shadow: 0px 0px 10px 2px rgba(212, 60, 56, 0.3)
+    box-shadow: 0px 0px 10px 2px rgba(212, 60, 56, 0.3)
+    transition: all 0.2s linear
+    cursor: pointer
+    &:hover
+      color: #D43C38
+      -webkit-box-shadow: 0px 0px 10px 2px rgba(212, 60, 56, 0.5)
+      -moz-box-shadow: 0px 0px 10px 2px rgba(212, 60, 56, 0.5)
+      box-shadow: 0px 0px 10px 2px rgba(212, 60, 56, 0.5)
+    &__text
+      margin: 0 15px 0 0
+      font-weight: 900
+      font-size: 18px
+      line-height: 22px
+  &-slider
+    position: relative
+    &__button
+      &--prev
+        position: absolute
+        display: inline-flex
+        top: 50%
+        left: 0
+        transform: translateY(-50%) rotate(180deg)
+        padding: 2px
+        cursor: pointer
+        z-index: 20
+      &--next
+        position: absolute
+        display: inline-flex
+        top: 50%
+        transform: translateY(-50%)
+        right: 0
+        padding: 2px
+        cursor: pointer
+        z-index: 20
+.swiper
+  display: none
+  max-width: 550px
+  padding-top: 30px
+  &-slide
+    width: 100%
+    max: 320px
