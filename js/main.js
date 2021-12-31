@@ -26,8 +26,7 @@ const productsSlider = new Swiper('.products-slider', {
 const menuBurger = document.querySelector('.header-top__burger');
 if (menuBurger) {
     const hiddenMenu = document.querySelector('.hidden-menu');
-    menuBurger.addEventListener('click', function (e) {
-      document.body.classList.toggle('_lock')
+    menuBurger.addEventListener('click', function (e) {      
       menuBurger.classList.toggle('_active');
       hiddenMenu.classList.toggle('hidden-menu--visible');
     });
